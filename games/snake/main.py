@@ -77,6 +77,10 @@ while running:
         if head[0] < 0 or head[0] >= width or head[1] < 0 or head[1] >= height:
             running = False
 
+        if score>2:
+            if head in snake[1:]:
+                running = False
+
         if head in obstacles:
             running = False
 
