@@ -1,6 +1,6 @@
 ## Description
 
-Fixes #issue_number
+Fixes #16
 
 Briefly describe the changes you made.
 

@@ -53,13 +53,17 @@ while running:
         if event.type == pygame.KEYDOWN:
             started = True
             if event.key == pygame.K_UP:
-                dx,dy = 0,-10
+                if dx!=0 and dy!=-10:
+                    dx,dy = 0,-10
             if event.key == pygame.K_DOWN:
-                dx,dy = 0,10
+                if dx!=0 and dy!=10:
+                    dx,dy = 0,10
             if event.key == pygame.K_LEFT:
-                dx,dy = -10,0
+                if dx!=-10 and dy!=0:
+                    dx,dy = -10,0
             if event.key == pygame.K_RIGHT:
-                dx,dy = 10,0
+                if dx!=10 and dy!=0:
+                    dx,dy = 10,0
 
     if started:
         head = (snake[0][0]+dx, snake[0][1]+dy)
